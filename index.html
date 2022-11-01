@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <title>A-Frame Solar System Animation</title>
+    </head>
+    <body>
+        <!--Entity can be used to control the behaviour and the functionality of the a-frame component like position, shapes, animations etc.-->
+        <!--Without any components, te entity doesn't have any function of its own (doesn't have any use)-->
+        <!--Entity is a container object which components can be attached-->
+        <a-scene background = 'color: #000'>
+            <!--A camera component is used to define the perpective view of the use and it can be attached to the input device to control the camera movement
+            for now we are keeping it empty and only adjust its position to have a better view of the objects on the web without using arrow keys-->
+            <a-entity position = '0 0 25'>
+                <a-camera></a-camera>
+            </a-entity>
+
+            <a-entity>
+                <!--This is the Sun-->
+                <a-sphere position = '0 2.5 -3' color = 'yellow' radius = '2'></a-sphere>
+            </a-entity>
+
+            <a-entity position = '0 0 0' rotation = '0 0 0' animation = 'property: rotation; to: 0 360 0 easing: linear; loop: true; dur: 10000'>
+                <!--This is Mercury-->
+                <a-sphere position = '2 3 -5' radius = '0.1' color = 'grey'></a-sphere>
+            </a-entity>
+
+            <a-entity position = '0 0 0' rotation = '0 0 1' animation = 'property: rotation; to: 0 360 0 easing: linear; loop: true; dur: 11000'>
+                <!--This is Venus-->
+                <a-sphere position = '4 2.5 -5' radius = '0.14' color = 'orange'></a-sphere>
+            </a-entity>
+
+            <a-entity position = '0 0 0' rotation = '0 0 2' animation = 'property: rotation; to: 0 360 0 easing: linear; loop: true; dur: 12000'>
+                <!--This is Earth-->
+                <a-sphere position = '5 2 -10' radius = '0.2' color = 'green'></a-sphere>
+            </a-entity>
+
+            <a-entity position = '0 0 0' rotation = '0 0 0' animation = 'property: rotation; to: 0 360 0 easing: linear; loop: true; dur: 13000'>
+                <!--This is Mars-->
+                <a-sphere position = '7 2.5 -10' radius = '0.15' color = 'red'></a-sphere>
+            </a-entity>
+
+            <a-entity position = '0 0 0' rotation = '0 0 0' animation = 'property: rotation; to: 0 360 0 easing: linear; loop: true; dur: 14000'>
+                <!--This is Jupiter-->
+                <a-sphere position = '9 2.3 -10' radius = '0.9' color = 'tan'></a-sphere>
+            </a-entity>
+
+            <a-entity position = '0 0 0' rotation = '0 0 0' animation = 'property: rotation; to: 0 360 0 easing: linear; loop: true; dur: 15000'>
+                <!--This is Saturn-->
+                <a-sphere position = '13 0 -10' radius = '0.7' color = 'white'></a-sphere>
+                <a-ring position = '13 0 -10' rotation = '0 0 0'color = 'tan'></a-ring>
+            </a-entity>
+
+            <a-entity position = '0 0 0' rotation = '0 0 0' animation = 'property: rotation; to: 0 360 0 easing: linear; loop: true; dur: 15500'>
+                <!--This is Uranus-->
+                <a-sphere position = '16 2 -10' radius = '0.5' color = 'blue'></a-sphere>
+            </a-entity>
+
+            <a-entity position = '0 0 0' rotation = '0 0 0' animation = 'property: rotation; to: 0 360 0 easing: linear; loop: true; dur: 16000'>
+                <!--This is Neptune-->
+                <a-sphere position = '18 3 -10' radius = '0.37' color = '#ADD8E6'></a-sphere>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
